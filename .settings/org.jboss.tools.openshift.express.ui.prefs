@@ -1,0 +1,7 @@
+eclipse.preferences.version=1
+org.jboss.tools.openshift.ApplicationId=552a95e65973cafb5100010e
+org.jboss.tools.openshift.ApplicationName=siwtapi
+org.jboss.tools.openshift.Connection=https\://ams10961%40gmail.com@
+org.jboss.tools.openshift.DeployFolder=deployments
+org.jboss.tools.openshift.Domain=ams10961
+org.jboss.tools.openshift.RemoteName=origin

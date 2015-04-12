@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datasources xmlns="http://www.jboss.org/ironjacamar/schema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.jboss.org/ironjacamar/schema">
+
+	<xa-datasource jndi-name="java:jboss/datasources/volatile" pool-name="volatile">
+		<driver>h2</driver>
+		<xa-datasource-property name="URL">jdbc:h2:mem:siwtapi;DB_CLOSE_DELAY=-1</xa-datasource-property>
+		<xa-pool>
+			<min-pool-size>10</min-pool-size>
+			<max-pool-size>20</max-pool-size>
+			<prefill>true</prefill>
+		</xa-pool>
+		<security>
+			<user-name>sa</user-name>
+			<password>sa</password>
+		</security>
+	</xa-datasource>
+
+
+	<xa-datasource jndi-name="java:jboss/datasources/persistent" pool-name="persistent"	enabled="true">
+        <xa-datasource-property name="URL">jdbc:mysql://localhost:3306/siwtapi</xa-datasource-property>
+ 		<driver>com.mysql</driver>
+		<xa-pool>
+			<min-pool-size>10</min-pool-size>
+			<max-pool-size>20</max-pool-size>
+			<prefill>true</prefill>
+		</xa-pool>
+		<security>
+			<user-name>root</user-name>
+			<password>passw0rd</password>
+		</security>
+	</xa-datasource>
+
+<!--  
+    <xa-datasource jndi-name="java:jboss/datasources/persistent" pool-name="persistent" enabled="true">
+        <xa-datasource-property name="URL">jdbc:mysql://127.5.43.2:3306/siwtapi</xa-datasource-property>
+        <driver>com.mysql</driver>
+        <xa-pool>
+            <min-pool-size>10</min-pool-size>
+            <max-pool-size>20</max-pool-size>
+            <prefill>true</prefill>
+        </xa-pool>
+        <security>
+            <user-name>admingJpFWbb</user-name>
+            <password>1pKvW9KQjIXQ</password>
+        </security>
+    </xa-datasource>
+-->
+
+   <!-- these entries should be in standalone.xml 
+    <drivers>
+        <driver name="h2" module="com.h2database.h2">
+            <xa-datasource-class>org.h2.jdbcx.JdbcDataSource</xa-datasource-class>
+        </driver>
+        <driver name="com.mysql" module="com.mysql">
+            <xa-datasource-class>com.mysql.jdbc.jdbc2.optional.MysqlXADataSource</xa-datasource-class>
+        </driver>
+    </drivers>
+   -->
+
+</datasources>

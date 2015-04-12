@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+	<arquillian xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns="http://jboss.org/arquillian"
+            xsi:schemaLocation="http://jboss.org/arquillian-1.0 http://jboss.org/schema/arquillian/arquillian-1.0.xsd">
+
+	<defaultProtocol type="Servlet 3.0" />
+
+	<!-- Example configuration for a remote JBoss AS 7 instance -->
+	<container qualifier="jboss-managed" default="true">
+		<configuration>
+		    <!--  values updated to avoid clashing with development instance -->
+			<property name="jbossHome">/home/ams10961/apps/jboss-as-7.1.1.Final</property>
+			<property name="javaVmArguments">-Xms1024m -Xmx2048m -XX:PermSize=512M -XX:MaxPermSize=512 -XX:+CMSClassUnloadingEnabled 
+			-Djboss.socket.binding.port-offset=100 -Djboss.management.native.port=9054 </property>
+			<property name="managementPort">9154</property>
+			<property name="outputToConsole">true</property>
+			<!-- keystore need to be copied to jbossHome/standalone/configuration -->
+			<property name="serverConfig">standalone.xml</property>
+		</configuration>
+	</container>
+
+</arquillian>
+
