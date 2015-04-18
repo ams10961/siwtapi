@@ -17,7 +17,6 @@
 		</security>
 	</xa-datasource>
 
-<!-- 
 	<xa-datasource jndi-name="java:jboss/datasources/persistent" pool-name="persistent"	enabled="true">
         <xa-datasource-property name="URL">jdbc:mysql://localhost:3306/siwtapi</xa-datasource-property>
  		<driver>com.mysql</driver>
@@ -31,8 +30,8 @@
 			<password>passw0rd</password>
 		</security>
 	</xa-datasource>
--->
- 
+
+<!-- 
     <xa-datasource jndi-name="java:jboss/datasources/persistent" pool-name="persistent" enabled="true">
         <xa-datasource-property name="URL">jdbc:mysql://127.5.43.2:3306/siwtapi</xa-datasource-property>
         <driver>com.mysql</driver>
@@ -46,6 +45,7 @@
             <password>1pKvW9KQjIXQ</password>
         </security>
     </xa-datasource>
+-->
 
 
    <!-- these entries should be in standalone.xml 
