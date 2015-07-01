@@ -539,7 +539,7 @@ public class TwitterService {
 
 		// returns oauth_token, oauth_token_secret, user_id, and screen_name
 		String keyValue = null;
-		if (responseBodyTokenizer.countTokens() == 4) {
+		if (responseBodyTokenizer.countTokens() >= 4) {
 			while (responseBodyTokenizer.hasMoreTokens()) {
 				keyValue = responseBodyTokenizer.nextToken();
 				// split key and value
